@@ -1,0 +1,514 @@
+/* Cargando fuentes desde la carpeta Fonts*/
+@font-face {
+   font-family: 'Oswald-Bold';
+   src: url(../Fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Oswald-Regular';
+	src: url(../Fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../Fonts/Poppins-Regular.ttf);
+}
+
+/* El scroll de la página tendrá un efecto más lento */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+/* Inicio nav */
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Imagen del logo */
+.nav-left img {
+    width: 330px;
+    padding: 10px;
+}
+
+nav .menu {
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+nav .menu a {
+    color: black;
+    text-decoration: none;
+    padding: 6px 20px;
+    margin-right: 10px;
+    font-family: 'Oswald-Bold';
+}
+
+nav .menu a:hover {
+    border: 2px solid black;
+    border-radius: 15px;
+    color: #000000;
+}
+
+/* Fin nav */
+
+/* Header */
+
+header {
+    background: linear-gradient(180deg, #E9E256 44.59%, rgba(247, 236, 12, 0) 92.66%);
+    padding-bottom: 40px;
+}
+
+header .banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1400px;
+	margin: auto;
+}
+
+/* Se le aplicará a todos los hijos de esa clase - en este caso serán la clase bannerInfo y la imagen */
+header .banner > * {
+	width: 50%;
+	text-align: center;
+}
+
+header .banner .bannerOrdenador {
+	width: 100%;
+    max-width: 600px;
+}
+
+header .banner .bannerInfo .letsPlay {
+	max-width: 550px;
+}
+
+header .buttons {
+    display: flex;
+    margin-top: 75px;
+	justify-content: space-evenly;
+}
+
+header .button-black {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.83);
+    box-shadow: -25px 25px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-decoration:none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+header .button-transparent {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    border: 5px solid #000000;
+    box-shadow: -25px 25px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-decoration:none;
+    padding: 13px 70px;
+}
+
+/* Fin Header */
+
+/* Section */
+
+main {
+    max-width: 1200px;
+	margin: auto;
+}
+
+section{
+    margin-top: 60px;
+}
+
+section .anchors {
+    margin-bottom: 60px;
+}
+
+section .anchor {
+    text-align: center;
+    margin-top: 65px;
+}
+
+section .anchor a {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 48px;
+    color: #000000;
+    text-decoration:none;
+}
+
+section .mapa {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+
+section .mapa img {
+    max-width: 480px;
+    padding: 15px 0 30px;
+
+}
+
+p#headline {
+    font-size: 2rem;
+    font-family: 'Poppins';
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+p#descripcion {
+    font-size: 1em;
+    font-family: 'Poppins';
+}
+
+/* Fin Section */
+
+.separador hr {
+    width: 85%;
+    border: 3px solid #FFF500;
+}
+
+/* Jugadores */
+
+article {
+    margin: 130px 0px 75px;
+}
+
+article .title-jugadores {
+    text-align: center;
+    margin-bottom: 90px;
+    padding: 0 15px;
+}
+
+article .jugadores {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+article .jugadores img {
+    width: 100%;
+}
+
+article .jugadores img:hover {
+  transform: scale(1.5);
+}
+
+/* Fin Jugadores */
+
+/* inicio footer */
+
+footer {
+	background-color: #E9E256;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer img {
+	width: 200px;
+	padding: 10px;
+}
+
+/* Fin footer */
+
+/* HTML Pistas */
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 430px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin: 40px auto;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    background-color: white;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.card-body{
+    padding: 10px;
+    border-left: rgba(255, 255, 255, 0.342) 1px solid;
+    border-top: rgba(255, 255, 255, 0.342) 1px solid;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.container:hover > .front {
+    transform: rotateY(-180deg);
+}
+
+.container:hover > .back {
+    transform: rotateY(0deg);
+}
+
+.btn {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.21);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    padding: 10px 40px;
+    background: white;
+    color:black
+}
+
+/* Fin Pistas */
+
+/* Personajes */
+
+.pistas main{
+    min-height: calc(100vh - 202px);
+} 
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* le ponemos un padding a la información escojiendo por los contenedores pares o impares */
+.contenedor:nth-child(odd) .informacion{
+    padding-left: 20px
+}
+
+.contenedor:nth-child(even) .informacion{
+    padding-right: 20px
+}
+
+.contenedor:first-child{
+    margin-top: 20px;
+}
+
+.contenedor:last-child{
+    margin-bottom: 40px;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.personajes{
+    width: 40%;
+}
+
+.personajes img{
+    width: 100%;
+}
+
+.informacion{
+    width: 60%;
+}
+
+.titulo{
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 20px;
+    text-shadow: 2px 1px 2px #00000085;
+}
+
+#titulo1{
+    color: #ACD7E6;
+}
+
+#titulo2{
+    color: #F5E1BF;
+}
+
+#titulo3{
+    color: #F7EF07;
+}
+
+#titulo4{
+    color: #325540;
+}
+
+#titulo5{
+    color: #FF4F3D;
+}
+
+.description{
+    font-family: 'Poppins';
+}
+
+/* Fin personajes */
+
+@media(max-width: 1200px){
+	header .banner {
+		flex-wrap: wrap;
+	}
+	
+	header .banner > * {
+		flex: 0 0 100%;
+	}
+	
+	header .banner .bannerInfo {
+		margin-top: 100px;
+	}
+	
+	header .buttons {
+		justify-content: center;
+		gap: 80px;
+	}
+	
+	header .banner .bannerOrdenador {
+		max-width: 600px;
+	}
+
+    /* pagina personajes */
+
+    .contenedor{
+        padding: 0 50px;
+    }
+
+    .personajes{
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 768px){
+    p#descripcion{
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 650px){
+    nav{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+	
+	nav > * {
+        flex: 0 0 100%;
+    }
+	
+	nav .nav-left {
+		text-align: center;
+	}
+
+    .menu{
+        flex-wrap: wrap;
+    }
+
+    .menu a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .letsPlay{
+        margin: 0;
+
+    }
+
+    header .bannerOrdenador{
+        position: relative;
+    }
+	
+	header .banner .bannerInfo {
+		margin-top: 50px;
+	}
+	
+	header .banner .bannerInfo .letsPlay {
+		max-width: 300px;
+		margin: 0 15px;
+	}
+	
+	header .buttons {
+		margin-top: 40px;
+		gap: 0;
+		flex-wrap: wrap;
+	}
+	
+	header .buttons > * {
+		flex: 0 0 50%;
+		display: block;
+	}
+	
+	header .buttons .button-black, header .buttons .button-transparent {
+		font-size: 20px;
+		line-height: 20px;
+		padding: 10px 20px;
+	}
+	
+	header .buttons .button-black {
+		border: 5px solid rgba(0, 0, 0, 0.83);
+	}
+	
+	header .buttons .button-transparent {
+		margin-top: 20px;
+	}
+
+    .title-jugadores img{
+        max-width: 100%;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .grupo-2{
+        padding: 0 20px;
+    }
+
+    /* pagina personajes */
+    .personajes, .informacion{
+        width: 100%;
+    }
+
+    .contenedor{
+        flex-wrap: wrap;
+    }
+
+    .contenedor.reverse{
+        flex-direction: row;
+    } 
+}
+
+@media (max-width: 480px){
+    section .mapa img{
+        padding: 50px;
+    }
+}
